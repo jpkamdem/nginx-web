@@ -1,0 +1,36 @@
+.navbar a,
+.navbar a:hover,
+.navbar a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+.navbar li {
+  display: block;
+  padding: 1em 0;
+}
+
+.navbar a:hover {
+  background: #fff;
+}
+
+.navbar a {
+  padding: 1em;
+}
+
+@media (max-width: 800px) {
+  .navbar ul {
+    justify-content: center;
+  }
+}

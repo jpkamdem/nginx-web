@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+.grid-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar main"
+    "sidebar main";
+}
+
+nav {
+  grid-area: navbar;
+  background-color: lightblue;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: lightgray;
+}
+
+main {
+  grid-area: main;
+  background-color: lightgreen;
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "navbar"
+      "sidebar"
+      "main";
+  }
+}
